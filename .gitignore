@@ -44,3 +44,7 @@ mandelbrot/src/testing
 mandelbrot/src/testing.rs
 mandelbrot/src/tests.rs
 mandelbrot/src/tests.rs
+target/
+Cargo.lock
+main
+mandelbrot.ppm

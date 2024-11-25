@@ -43,7 +43,7 @@ pub fn generate_image(width: usize, height: usize, max_iterations: usize) -> Ima
             //idk why i need to make if here. the compiler told me to do so
             if let Some(pixel) = new_image.get_mut(x, y)
             {
-               *pixel = Pixel {r: 255, g: 255, b:255}
+               *pixel = Pixel {r: 255, g: 255, b:255};
             } 
 
             

@@ -12,7 +12,7 @@ impl std::fmt::Display for Pixel
 {
    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result 
    {
-      write!(f, "({}, {}, {})", self.r, self.g, self.b)
+      write!(f, "{} {} {}", self.r, self.g, self.b)
    }
 
 }
@@ -45,7 +45,7 @@ impl Image
          return None;
       }
 
-      return Some(&self.data[x*y]);
+      return Some(&self.data[y * self.width + x]);
    }
 
    pub fn get_mut(&mut self, x: usize, y: usize) -> Option<&mut Pixel>
@@ -59,7 +59,7 @@ impl Image
          return None;
       }
 
-      return Some(& mut self.data[x*y]);
+      return Some(& mut self.data[y * self.width + x]);
    }
 
    pub fn get_mandelbrot_pixels(&self) -> usize
