@@ -31,7 +31,7 @@ impl std::ops::Mul for Complex
       Complex
       {
          re: (self.re * other.re - self.im * other.im),
-         im: (self.re * other.im + self.re * other.im),
+         im: (self.re * other.im + self.im * other.re),
       }
    }
 }  
